@@ -51,6 +51,12 @@ a:focus {
     color: #7F8C8D;
 }
 
+a[target]:before {
+	font-family: FontAwesome;
+	content: '\f08e';
+	padding: 0 5px;
+}
+
 .light {
     font-weight: 400;
 }
