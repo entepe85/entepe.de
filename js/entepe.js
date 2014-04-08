@@ -9,6 +9,7 @@ $(window).scroll(function() {
 
 //jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
+	new WOW().init();
     $('.page-scroll a').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({

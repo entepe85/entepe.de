@@ -280,7 +280,9 @@ a[target]:before {
 	border-bottom: 40px solid white;
 	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 	float: right;
+	position: relative;
 	margin: 0 0 0.5em 1em;
+	z-index: 10;
 }
 
 .music-section {
