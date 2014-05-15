@@ -1,8 +1,28 @@
+//out: ../css/entepe.css, compress: true
+
 // Variables
 
 @primary: #28c3ab;
 @dark: #000;
 @light: #fff;
+@blue: #2C3E50;
+@sunflower: #F1C40F;
+@orange: #F39C12;
+@pomegranate: #C0392B;
+@turquoise: #1ABC9C;
+@greensea: #16A085;
+@pumpkin: #D35400;
+@carrot: #E67E22;
+@emerald: #2ECC71;
+@nephritis: #27AE60;
+
+
+// MIXINS
+.box-shadow(@x,@y,@s,@c) {
+    box-shadow: @x @y @s @c;
+    -webkit-box-shadow: @x @y @s @c;
+    -moz-box-shadow: @x @y @s @c;
+}
 
 // LESS
 
@@ -11,7 +31,10 @@ body {
     height: 100%;
     font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: @light;
-    background-color: @dark;
+    background-color: @blue;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -19,7 +42,7 @@ html {
     height: 100%;
 }
 
-// Typhography 
+// Typhography
 
 h1,
 h2,
@@ -49,7 +72,7 @@ p {
 }
 
 a {
-    color: @primary;
+    color: @greensea;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -58,21 +81,21 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: darken(@primary, 20%);
+    color: darken(@greensea, 20%);
 }
 
 .light {
     font-weight: 400;
 }
 
- // Navigation 
+ // Navigation
 
  .navbar {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,0.3);
     text-transform: uppercase;
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: @dark;
+    background-color: @blue;
 }
 
 .navbar-brand {
@@ -124,7 +147,7 @@ a:focus {
 
     .top-nav-collapse {
         padding: 0;
-        background-color: @dark;
+        background-color: @blue;
     }
 
     .navbar-custom.top-nav-collapse {
@@ -132,7 +155,7 @@ a:focus {
     }
 }
 
- // Full Page Image Intro Section 
+ // Full Page Image Intro Section
 
  .intro {
     display: table;
@@ -141,8 +164,8 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: @light;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
-    background-color: @dark;
+    // background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background-color: @emerald;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -186,7 +209,7 @@ a:focus {
     border-radius: 35px;
     font-size: 40px;
     color: @light;
-    background: transparent;
+    background: @blue;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
@@ -217,7 +240,7 @@ a:focus {
     -moz-animation-timing-function: linear;
 }
 
-@-webkit-keyframes pulse {    
+@-webkit-keyframes pulse {
     0 {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -234,7 +257,7 @@ a:focus {
     }
 }
 
-@-moz-keyframes pulse {    
+@-moz-keyframes pulse {
     0 {
         -moz-transform: scale(1);
         transform: scale(1);
@@ -251,10 +274,27 @@ a:focus {
     }
 }
 
- // Content Sections 
+ // Content Sections
 
  .content-section {
     padding-top: 100px;
+    padding-bottom: 50px;
+    img {
+        &.right {
+            float: right;
+            margin: 0 0 1em 1em;
+            border: 3px solid white;
+            border-bottom: 30px solid white;
+            .box-shadow(0,0,5px,rgba(0,0,0,0.33));
+            position: relative;
+            z-index: 999;
+        }
+    }
+    blockquote {
+        font-size: 1.33em;
+        font-style: italic;
+        background-color: rgba(0,0,0,0.33);
+    }
 }
 
 .download-section {
@@ -275,6 +315,10 @@ a:focus {
     margin-top: 100px;
 }
 
+#music {
+    background-color: @emerald;
+}
+
 @media(min-width:767px) {
     .content-section {
         padding-top: 250px;
@@ -290,7 +334,7 @@ a:focus {
     }
 }
 
- // Buttons 
+ // Buttons
 
  .btn {
     text-transform: uppercase;
@@ -302,17 +346,17 @@ a:focus {
 }
 
 .btn-default {
-    border: 1px solid @primary;
-    color: @primary;
+    border: 1px solid @emerald;
+    color: @emerald;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid @primary;
+    border: 1px solid @emerald;
     outline: none;
-    color: @dark;
-    background-color: @primary;
+    color: @blue;
+    background-color: @emerald;
 }
 
 .btn-huge {
@@ -342,7 +386,7 @@ a:focus {
     }
 }
 
- // Highlight Color Customization 
+ // Highlight Color Customization
 
 ::-moz-selection {
     text-shadow: none;
