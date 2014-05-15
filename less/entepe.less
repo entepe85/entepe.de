@@ -6,6 +6,7 @@
 @dark: #000;
 @light: #fff;
 @blue: #2C3E50;
+@lightblue: #34495E;
 @sunflower: #F1C40F;
 @orange: #F39C12;
 @pomegranate: #C0392B;
@@ -72,7 +73,7 @@ p {
 }
 
 a {
-    color: @greensea;
+    color: @carrot;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -81,7 +82,14 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: darken(@greensea, 20%);
+    color: darken(@carrot, 20%);
+}
+
+a[target]:before {
+    font-family: 'FontAwesome';
+    content: "\f08e";
+    font-size: 0.66em;
+    padding: 0 5px 0 2px;
 }
 
 .light {
@@ -294,6 +302,12 @@ a:focus {
         font-size: 1.33em;
         font-style: italic;
         background-color: rgba(0,0,0,0.33);
+        border-left: 5px solid @sunflower;
+    }
+    a {
+        color: @emerald;
+        &:hover { color: @nephritis; }
+        &:focus { color: @nephritis; }
     }
 }
 
@@ -317,6 +331,11 @@ a:focus {
 
 #music {
     background-color: @emerald;
+    a {
+        color: @blue;
+        &:hover { color: lighten(@blue, 20%); }
+        &:focus { color: lighten(@blue, 20%); }
+    }
 }
 
 @media(min-width:767px) {
