@@ -31,7 +31,7 @@ body {
     width: 100%;
     height: 100%;
     font-family: "Roboto Slab", serif;
-    color: @light;
+    color: @clouds;
     background-color: @blue;
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
@@ -115,7 +115,7 @@ a[target]:before {
 }
 
 .navbar-custom a {
-    color: @light;
+    color: @clouds;
 }
 
 .navbar-custom .nav li a {
@@ -134,7 +134,7 @@ a[target]:before {
 .navbar-toggle {
     padding: 4px 6px;
     font-size: 16px;
-    color: @light;
+    color: @clouds;
 }
 
 .navbar-toggle:focus,
@@ -171,7 +171,7 @@ a[target]:before {
     height: auto;
     padding: 100px 0;
     text-align: center;
-    color: @light;
+    color: @clouds;
     // background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
     background-color: @lightblue;
     -webkit-background-size: cover;
@@ -307,6 +307,12 @@ a[target]:before {
                 margin: 1em 0;
                 width: 75%;
             }
+        }
+        &.portrait {
+            border: 3px solid @nephritis;
+            border-radius: 50%;
+            .box-shadow(0,0,0,0);
+            shape-outside: circle(49%);
         }
     }
     blockquote {
