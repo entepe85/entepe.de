@@ -108,6 +108,9 @@ a[target]:before {
 
 .navbar-brand {
     font-weight: 700;
+    @media screen and (max-width: 364px) {
+        font-size: 16px;
+    }
 }
 
 .navbar-brand:focus {
@@ -172,12 +175,12 @@ a[target]:before {
     padding: 100px 0;
     text-align: center;
     color: @clouds;
-    // background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
-    background-color: @lightblue;
+    background: url(../img/intro-bg-blurred.jpg) no-repeat bottom center scroll;
+    // background-color: @lightblue;
     -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+       -moz-background-size: cover;
+            background-size: cover;
+         -o-background-size: cover;
 }
 
 .intro-body {
@@ -303,8 +306,9 @@ a[target]:before {
             position: relative;
             z-index: 999;
             @media screen and (max-width: 439px) {
+                display: block;
                 float: none;
-                margin: 1em 0;
+                margin: 3em auto;
                 width: 75%;
             }
         }
@@ -313,12 +317,14 @@ a[target]:before {
             border-radius: 50%;
             .box-shadow(0,0,0,0);
             shape-outside: circle(49%);
+            height: 256px;
+            width: 256px;
         }
     }
     blockquote {
         font-size: 1.33em;
         font-style: italic;
-        background-color: rgba(0,0,0,0.33);
+        background-color: transparent;
         border-left: 5px solid @emerald;
     }
     a {
